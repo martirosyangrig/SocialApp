@@ -1,5 +1,5 @@
 "use client";
-import { useRouter } from "next/navigation";
+import { useRouter, usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
 
 export default function AuthProvider({
@@ -9,14 +9,16 @@ export default function AuthProvider({
 }) {
   const [isLoggedIn, setIsLoggedIn] = useState<boolean>(false);
   const router = useRouter();
-
+  const pathname = usePathname();
   useEffect(() => {
+    console.log(pathname);
+
     if (sessionStorage.getItem("token")) {
       router.push("/home");
-    } else {
+    } else if (pathname !== "/signin" && pathname !== "/singup") {
       router.push("/welcome");
     }
   }, []);
 
-  return <div style={{height: '100%'}}>{children}</div>;
+  return <div style={{ height: "100%" }}>{children}</div>;
 }

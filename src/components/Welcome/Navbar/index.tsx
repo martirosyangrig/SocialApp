@@ -1,3 +1,4 @@
+import Link from "next/link";
 import style from "./navbar.module.scss";
 
 export default function WelcomeNavbar() {
@@ -5,10 +6,12 @@ export default function WelcomeNavbar() {
     <nav className={style.wraper}>
       <div className={style.continer}>
         <div>
-          <h2 className={style.greetings}>Greetings</h2>
+          <h2 className={style.greetings}>Welcome</h2>
         </div>
         <div>
-          <button>Sign Up</button>
+          <Link href={"/singup"} className={style.button}>
+            Sign Up
+          </Link>
         </div>
       </div>
     </nav>
