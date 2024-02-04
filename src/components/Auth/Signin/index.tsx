@@ -20,6 +20,8 @@ export default function Signin() {
     setShowPassword(!showPassword);
   };
 
+  const sigin = () => {};
+
   return (
     <div className={style.wraper}>
       <div className={style.continer}>
@@ -48,7 +50,9 @@ export default function Signin() {
               {showPassword ? "Hide" : "Show"}
             </button>
           </div>
-          <button>Sign In →</button>
+          <button type="submit" onClick={sigin}>
+            Sign In →
+          </button>
         </form>
         <div>
           <span className={style.singupInfo}>Don't have an account?</span>

@@ -6,10 +6,10 @@ export default function WelcomeNavbar() {
     <nav className={style.wraper}>
       <div className={style.continer}>
         <div>
-          <h2 className={style.greetings}>Welcome</h2>
+          <Link href={'/welcome'} className={style.greetings}>Welcome</Link>
         </div>
         <div>
-          <Link href={"/singup"} className={style.button}>
+          <Link href={"/signup"} className={style.button}>
             Sign Up
           </Link>
         </div>

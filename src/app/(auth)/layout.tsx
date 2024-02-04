@@ -9,7 +9,7 @@ export default function AuthLayout({
   return (
     <div
       style={{
-        height: "100%",
+        height: "100vh",
         width: "100%",
         display: "flex",
         flexDirection: "column",
