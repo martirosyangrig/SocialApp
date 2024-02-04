@@ -9,7 +9,7 @@ export default function WelcomeNavbar() {
           <h2 className={style.greetings}>Welcome</h2>
         </div>
         <div>
-          <Link href={"/singup"} className={style.button}>
+          <Link href={"/signup"} className={style.button}>
             Sign Up
           </Link>
         </div>

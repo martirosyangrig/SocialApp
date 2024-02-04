@@ -15,7 +15,7 @@ export default function AuthProvider({
 
     if (sessionStorage.getItem("token")) {
       router.push("/home");
-    } else if (pathname !== "/signin" && pathname !== "/singup") {
+    } else if (pathname !== "/signin" && pathname !== "/signup") {
       router.push("/welcome");
     }
   }, []);
