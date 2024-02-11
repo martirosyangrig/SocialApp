@@ -1,0 +1,75 @@
+.wraper {
+  width: 100%;
+  height: 80px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  background-color: white;
+
+  .continer {
+    width: 95%;
+    height: 100%;
+    display: flex;
+
+    .logoInfo {
+      width: 250px;
+      height: 100%;
+      display: flex;
+      align-items: center;
+
+      span {
+        font-size: 24px;
+        font-weight: 700;
+        margin-left: 15px;
+      }
+    }
+
+    .mainContent {
+      width: 65%;
+      height: 74%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px 20px 10px 20px;
+
+      span {
+        font-size: 23px;
+        font-weight: 700;
+      }
+
+      .searchBar {
+        width: 350px;
+        height: 61%;
+        display: flex;
+        position: relative;
+
+        input {
+          width: 100%;
+          height: 100%;
+          padding-left: 35px;
+          border: 1px solid rgb(236, 226, 226);
+          background-color: #eaecf0;
+          border-radius: 8px;
+
+          &:focus {
+            outline: none;
+            border-color: rgb(191, 223, 235);
+            border-width: 2px;
+            border-radius: 10px;
+          }
+        }
+
+        button {
+          width: 33px;
+          height: 42px;
+          position: absolute;
+          border: none;
+          background-color: transparent;
+          cursor: pointer;
+        }
+      }
+    }
+  }
+}

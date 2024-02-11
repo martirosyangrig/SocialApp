@@ -1,5 +1,6 @@
 "use client";
 import { ChangeEvent, useState } from "react";
+import { useRouter } from "next/navigation";
 import style from "./sigin.module.scss";
 import Link from "next/link";
 
@@ -7,7 +8,7 @@ export default function Signin() {
   const [email, setEmail] = useState<string>();
   const [password, setpassword] = useState<string>();
   const [showPassword, setShowPassword] = useState<boolean>(false);
-
+  const router = useRouter();
   const onEmailChange = (e: ChangeEvent<HTMLInputElement>) => {
     setEmail(e.target.value);
   };
@@ -20,7 +21,9 @@ export default function Signin() {
     setShowPassword(!showPassword);
   };
 
-  const sigin = () => {};
+  const sigin = () => {
+    router.push("/community");
+  };
 
   return (
     <div className={style.wraper}>
@@ -39,16 +42,18 @@ export default function Signin() {
           </div>
           <div className={style.emailContiner}>
             <label htmlFor="password">Password</label>
-            <input
-              type={showPassword ? "text" : "password"}
-              id="password"
-              value={password}
-              onChange={onPasswordChange}
-              required
-            />
-            <button onClick={togglePasswordVisibility}>
-              {showPassword ? "Hide" : "Show"}
-            </button>
+            <div className={style.passContiner}>
+              <input
+                type={showPassword ? "text" : "password"}
+                id="password"
+                value={password}
+                onChange={onPasswordChange}
+                required
+              />
+              <button onClick={togglePasswordVisibility}>
+                {showPassword ? "Hide" : "Show"}
+              </button>
+            </div>
           </div>
           <button type="submit" onClick={sigin}>
             Sign In →
