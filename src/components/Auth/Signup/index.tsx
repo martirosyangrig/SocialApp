@@ -89,7 +89,7 @@ export default function Signup() {
           </div>
           <button type="submit">Sign In →</button>
         </form>
-        <div>
+        <div className={style.signinContiner}>
           <span className={style.singinInfo}>Already have an account?</span>
           <Link href={"/signin"} className={style.signin}>
             Sign In
