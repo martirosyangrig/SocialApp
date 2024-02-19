@@ -1,7 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
-import GithubLogo from "@/assets/icons8-github.svg";
-import LinkedInLogo from "@/assets/icons8-linkedin.svg";
+import GithubLogo from "@/assets/icons/icons8-github.svg";
+import LinkedInLogo from "@/assets/icons/icons8-linkedin.svg";
 
 import style from "./footer.module.scss";
 

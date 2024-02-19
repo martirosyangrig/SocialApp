@@ -6,7 +6,10 @@
   align-items: center;
   position: fixed;
   top: 0;
+  z-index: 999;
   background-color: white;
+  border-bottom: 1px solid rgb(228, 228, 228);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 
   .continer {
     width: 95%;
@@ -14,50 +17,35 @@
     display: flex;
 
     .logoInfo {
-      width: 250px;
+      width: 300px;
       height: 100%;
       display: flex;
       align-items: center;
+      gap: 12px;
 
       span {
         font-size: 24px;
         font-weight: 700;
         margin-left: 15px;
       }
-    }
-
-    .mainContent {
-      width: 65%;
-      height: 74%;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 10px 20px 10px 20px;
-
-      span {
-        font-size: 23px;
-        font-weight: 700;
-      }
 
       .searchBar {
-        width: 350px;
+        width: 210px;
         height: 61%;
         display: flex;
         position: relative;
 
         input {
           width: 100%;
-          height: 100%;
+          height: 90%;
           padding-left: 35px;
-          border: 1px solid rgb(236, 226, 226);
+          border: none;
           background-color: #eaecf0;
-          border-radius: 8px;
+          border-radius: 18px;
 
           &:focus {
             outline: none;
-            border-color: rgb(191, 223, 235);
             border-width: 2px;
-            border-radius: 10px;
           }
         }
 
@@ -68,7 +56,42 @@
           border: none;
           background-color: transparent;
           cursor: pointer;
+          transform: translate(0px, 5px);
         }
+      }
+    }
+
+    .title {
+      width: 65%;
+      height: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      span {
+        font-size: 47px;
+        font-weight: 900;
+        font-family: cursive;
+        color: darkslategray;
+      }
+    }
+
+    .icons {
+      width: 20%;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+      gap: 20px;
+
+      .iconHandler {
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: #e4e6eb;
       }
     }
   }

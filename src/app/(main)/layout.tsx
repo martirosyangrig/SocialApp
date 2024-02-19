@@ -1,3 +1,5 @@
+import AsideL from "@/components/AsideL";
+import AsideR from "@/components/AsideR";
 import MainNavbar from "@/components/Navbar";
 import WelcomeFooter from "@/components/Welcome/Footer";
 
@@ -18,12 +20,15 @@ export default function MainLayout({
       <MainNavbar />
       <div
         style={{
-          width: "100%",
-          height: "100%",
           display: "flex",
+          flex: 1,
+          marginTop: "82px",
+          backgroundColor: "white",
         }}
       >
+        <AsideL />
         {children}
+        <AsideR />
       </div>
       <WelcomeFooter />
     </div>
